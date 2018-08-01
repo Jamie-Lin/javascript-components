@@ -1,0 +1,64 @@
+body {
+  height: 100vh;
+}
+.container {
+  height: 100%;
+}
+
+.side-menu, .site-container {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.side-menu {
+  display: none;
+  vertical-align: bottom;
+  text-align: center;
+  background-color: black;
+  color: lightseagreen;
+}
+
+.side-menu.open-menu {
+  display: inline-block;
+}
+
+.side-menu__list {
+  padding: 20px;
+}
+
+.side-menu__item {
+  padding: 10px;
+}
+
+.side-menu__item a {
+  color: lightseagreen;
+}
+
+.menu-icon {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  display: inline-block;
+  color: black;
+  font-size: 13px;
+}
+
+.menu-icon__bar {
+  width: 30px;
+  height: 0;
+  border: 1px solid black;
+  margin: 5px 0;
+}
+
+.site-container {
+  /* width: 100%; */
+  background-color: darkcyan;
+  color: white;
+}
+
+.site-content {
+  max-width: 550px;
+  padding: 50px;
+  margin-top: 50px;
+}
