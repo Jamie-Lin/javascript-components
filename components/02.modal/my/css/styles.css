@@ -1,0 +1,85 @@
+body {
+  background-color: #e9fbff;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.button {
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  background-color: #8da1ff;
+  color: #fff;
+}
+
+/* LoVe HAte */
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: #5e7af0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container > * {
+  position: relative;
+}
+
+.container button {
+  display: block;
+}
+
+.modal-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  /* Optionally */
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  z-index: -1;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 3em;
+  border-radius: 12px;
+  background-color: #8da1ff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+  min-width: 50vmin;
+  min-height: 50vmin;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 1em;
+}
+
+.modal__content {
+  text-align: center;
+}
+
+.modal__content > * + * {
+  margin-top: 0.75em;
+}
+
+.modal-is-open .modal-container {
+  opacity: 1;
+  z-index: 1;
+}
