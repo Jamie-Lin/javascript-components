@@ -1,0 +1,60 @@
+.accordion-container {
+  /* display: flex;
+  flex-direction: column; */
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.accordion {
+}
+
+.accordion__header {
+  position: relative;
+  padding: 10px;
+}
+
+.accordion__header h1 {
+  text-transform: uppercase;
+}
+
+.accordion[data-type="cheese"] {
+  background-color: #F3CA5F;
+}
+
+.accordion[data-type="lettuce"] {
+  background-color: #88D28B;
+}
+
+.accordion[data-type="tomato"] {
+  background-color: #BC2A35;
+}
+
+.accordion[data-type="beef"] {
+  background-color: #7D5945;
+}
+
+.accordion__content {
+  display: none;
+  padding: 30px;
+}
+
+.is-open .accordion__content {
+  display: block;
+}
+
+.accordion__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1em;
+}
+
+.accordion__button::after {
+  content: '+';
+}
+
+.is-open .accordion__button::after {
+  content: '-';
+}
