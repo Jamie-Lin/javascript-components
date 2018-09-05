@@ -1,0 +1,81 @@
+html {
+  font-size: 100%;
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  background-color: black;
+}
+
+h2 {
+  font-size: 3.75em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+.tabbed-component {
+  position: relative;
+  max-width: 58em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tabs {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+
+.tabs > * {
+  flex-grow: 1;
+}
+
+.tab {
+  font-size: 1em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.tab > a {
+  /* in order to fit the parentElement(li) */
+  display: block; 
+  color: white;
+  background-color: #1e1e1e;
+  padding: 1em;
+}
+
+/* width >= 450px, use this css */
+@media screen and (min-width: 450px) {
+  .tab {
+    text-align: left;
+  }
+}
+
+.tab:not(.is-selected) .tab__icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.tab.is-selected > a {
+  background-color: #323232;
+}
+
+/**
+ * Tab Content
+ */
+@media screen and (min-width: 850px) {
+  .tab-content-container {
+    background-color: #323232;
+    padding: 0.75em;
+  }
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.is-selected {
+  display: grid;
+}
